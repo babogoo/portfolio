@@ -1,0 +1,289 @@
+
+/* ==============================================================
+    Basic
+ ================================================================*/
+
+body {
+    line-height: 1.7rem;
+    font-size: $f16;
+    background-color: #eaeaea;
+    color: #323232;
+    font-family: Arial, Verdana , sans-serif , "Microsoft JhengHei";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling: auto;
+    -webkit-backface-visibility: hidden;
+	opacity: 0;
+    transition: opacity 0.3s ease-out;
+    &.is-start {
+       opacity: 1;
+    }
+    &.overflow {
+        overflow: hidden !important;
+    }
+}
+
+html , body {
+    &.is-active {
+        height: 100vh;
+        overflow: hidden !important;
+    }
+}
+
+
+
+.eng {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.pc img {
+    width: 100%;
+    height: auto;
+}
+
+.wp {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+
+.vh100 {
+    height: 100vh;
+}
+
+.font-Lora {
+   font-family: 'Lora',"Microsoft JhengHei", serif;
+}
+
+/* ============================================================
+    common
+ ==============================================================*/
+
+@mixin font($size: $f15, $color:#323232 ) {
+    font-size: $size;
+    color: $color;
+}
+//ex: @include font($f16);
+
+@mixin font1($size: $f15, $color:#323232 ,  $align:left , $weight:normal ) {
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+    text-align: $align;
+}
+//ex: @include font1($f16);
+
+@mixin box ( $width:100% , $height:auto , $position: relative , $dispaly: block){
+    width: $width;
+    height: $height;
+    position: $position;
+    display: $dispaly;
+}
+//@include box();
+
+@mixin wh ( $width:100% , $height:auto){
+    width: $width;
+    height: $height;
+}
+//@include wh();
+
+
+@mixin circle ( $w: $f16 , $h: $f16, $bg: #fff , $block: block){
+    width: $w;
+    height: $h;
+    border-radius: 99em;
+    background-color: $bg;
+    display: $block;
+    text-align: center;
+}
+//@include circle(  $f16 , $f16 ) ;
+
+/* ========  .btnGroup   =======*/
+@mixin btn ( $font:$f16, $color:#fff , $bg:#323232
+        , $padding:7px 20px 7px 20px
+        , $radius: 30px){
+    font-size:  $font;
+    color: $color;
+    background: $bg;
+    padding: $padding ;
+    border-radius: $radius ;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    font-family: Helvetica , Verdana, Arial,  sans-serif , "Microsoft JhengHei";
+    .max-sm-size &{
+        padding: 10px 20px 10px 20px;
+    }
+}
+
+
+.trans-btn {
+   @include btn( $f16 , $pink , transparent , 9px 20px );
+   border: 2px solid $pink;
+   transition: color 0.3s, background 0.3s ease-out;
+   &:hover , &:focus {
+        background: #e08888;
+        color: #fff;
+        transition: color 0.3s, background 0.3s ease-out;
+    }
+}
+
+
+.btn-group {
+    @extend %wrapper;
+    display: inline-block;
+    text-align: center;
+    margin: 25px auto;
+    .btn {
+        min-width: 115px;
+        margin: 0 5px;
+    }
+    .max-sm-size & {
+        margin: 15px auto;
+        .btn {
+            max-width: 100%;
+            width: 100% !important;
+            margin: 8px 0;
+        }
+    }
+}
+
+
+
+%cover {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    z-index: 9;
+}
+// ex: @extend %cover;
+.cover {
+    @extend %cover;
+}
+
+%cover-a {
+    @extend %cover;
+    min-height: 100%;
+    z-index: 99;
+    background-size: cover;
+}
+// ex: @extend %cover;
+.cover-a {
+    @extend %cover-a;
+}
+
+
+
+
+%ico-font {
+    font-family: 'icomoon' !important;
+}
+//ex: @extend %ico-font;
+.icon {
+    @extend %ico-font;
+}
+
+%line {
+    width:100%;
+    height:1px;
+    display: block;
+    clear:both;
+    background: #dcaaaa;
+}
+
+.Line {
+    @extend %line;
+}
+
+%wrapper {
+    width:100%;
+    height:auto;
+    clear:both;
+    position: relative
+}
+// @extend %wrapper;
+.wrapper {
+    @extend %wrapper;
+}
+
+%linkA {
+    color: #323232;
+    display: inline-block;
+    text-decoration: none;
+    &:hover , &:focus {
+        color: #6c6e71;
+        text-decoration: underline;
+    }
+}
+// ex: @extend %linkA ;
+.link {
+    @extend %linkA ;
+}
+
+
+
+/* ===========================================================
+   [ set  ]
+ =============================================================*/
+
+$headerH :90px;
+$headerH-sm :60px;
+
+.main {
+    background: #fff;
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-top: $headerH;
+    z-index: 5;
+    .max-sm-size & {
+        margin-top: $headerH-sm;
+    }
+}
+
+
+//width
+$maxW:1600px;
+$maxW-s:1300px;
+$maxW-xs:1100px;
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    max-width: $maxW-s;
+    z-index: 2;
+    .max-lg-size & {
+        padding-left: $f20;
+        padding-right: $f20;
+    }
+    .max-sm-size &.sp {
+        padding: 0;
+    }
+}
+
+.maxW-s {
+    max-width: $maxW-s;
+}
+
+.maxW-xs {
+    max-width: $maxW-xs;
+}
+
+article {
+    position: relative;
+}
+
+section {
+    clear: both;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
