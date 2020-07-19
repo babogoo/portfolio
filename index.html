@@ -1,7 +1,5 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,8 +7,7 @@
 	<title>蔡昕妤 - 作品集 </title>
 	<link rel="shortcut icon" href="imgs/favicon.ico"/>
 
-	<!-- <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" /> -->
-	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css?=v1" />
 	<link rel="stylesheet" href="https://i.icomoon.io/public/99eb13a9b2/hady/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 </head>
@@ -128,289 +125,35 @@
 		<div class="section" id="projects">
 			<div class="fp-bg"></div>
 
-			<div class="container">
+			<div class="container"  id="app">
 				<h2 class="dark wow fadeInUpM">專案 / Projects</h2>
+				<h3 cass="subTitle f25 wow fadeInUpM"> - 網站</h3>
 
 				<div class="row wow fadeInUpM" data-wow-delay="0.2s">
-
-					<div class="col col-12 col-md-4 col-xl-3">
+					<div class="col col-12 col-md-4 col-xl-3 wow fadeInUpM" 
+						v-for="(item, key) in webs" v-if="item.type == 1">
 						<figure class="figure project-item">
 							<div class="pc">
-								<a href="https://www.xin-stars.com/" target="blank" class="cover"></a>
-								<img src="imgs/works/xin-1.png" alt=""/>
+								<a v-bind:href="item.href" targeth3="blank" class="cover"></a>
+								<img v-bind:src="item.img" v-bind:alt="item.title" />
 							</div>
-						  	<figcaption class="figcaption">星城官網</figcaption>
+							<figcaption class="figcaption">{{ item.title }}</figcaption>
 						</figure>
 					</div>
+				</div>
 
-					<div class="col col-12 col-md-4 col-xl-3">
+				<h3 cass="subTitle f25 wow fadeInUpM"> - 活動頁</h3>
+				<div class="row wow fadeInUpM" data-wow-delay="0.2s">
+					<div class="col col-12 col-md-4 col-xl-3 wow fadeInUpM" 
+						v-for="(item, key) in webs" v-if="item.type == 2">
 						<figure class="figure project-item">
 							<div class="pc">
-								<a href="https://dk.molome.tw/" target="blank" class="cover"></a>
-								<img src="imgs/works/xin-2.png" alt="Dekaron"/>
+								<a v-bind:href="item.href" target="blank" class="cover"></a>
+								<img v-bind:src="item.img" v-bind:alt="item.title" />
 							</div>
-						  	<figcaption class="figcaption">Dekaron</figcaption>
+							<figcaption class="figcaption">{{ item.title }}</figcaption>
 						</figure>
 					</div>
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="https://js2.molome.tw/" target="blank" class="cover"></a>
-								<img src="imgs/works/xin-3.png" alt="劍俠世界貳"/>
-							</div>
-						  	<figcaption class="figcaption">劍俠世界貳</figcaption>
-						</figure>
-					</div>
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="https://www.waningames.com/" target="blank" class="cover"></a>
-								<img src="imgs/works/xin-4.png" alt="WANIN Games會員平台"/>
-							</div>
-						  	<figcaption class="figcaption">WANIN Games會員平台</figcaption>
-						</figure>
-					</div>
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="https://www.xin-stars.com/_event/event_Promotion/20200714_DragonGirl/" target="blank" class="cover"></a>
-								<img src="imgs/works/a1.png" />
-							</div>
-						  	<figcaption class="figcaption">【活動頁】夏日大挑戰</figcaption>
-						</figure>
-					</div>
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="https://www.xin-stars.com/_event/event_Promotion/20200424_EVANGELION/" target="blank" class="cover"></a>
-								<img src="imgs/works/a-2.png" />
-							</div>
-						  	<figcaption class="figcaption">【活動頁】跨界作戰計畫</figcaption>
-						</figure>
-					</div>
-
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="https://xin-stars.com/_event/event_Promotion/20191009_PokeGame/" target="blank" class="cover"></a>
-								<img src="imgs/works/a-3.png" />
-							</div>
-						  	<figcaption class="figcaption">【活動頁】星城戳戳樂</figcaption>
-						</figure>
-					</div>
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="https://xin-stars.com/_event/event_Promotion/20190704_ScratchCard/" target="blank" class="cover"></a>
-								<img src="imgs/works/a-4.png" />
-							</div>
-						  	<figcaption class="figcaption">【活動頁】星城刮刮樂</figcaption>
-						</figure>
-					</div>
-
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="https://www.luckyraingame.com/LuckyEvent/20200519_poker" target="blank" class="cover"></a>
-								<img src="imgs/works/v-1.png" />
-							</div>
-						  	<figcaption class="figcaption">【活動頁】Poker </figcaption>
-						</figure>
-					</div>
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="https://www.luckyraingame.com/LuckyEvent/20200421_Robin" target="blank" class="cover"></a>
-								<img src="imgs/works/v-2.png" />
-							</div>
-						  	<figcaption class="figcaption">【活動頁】羅賓</figcaption>
-						</figure>
-					</div>
-
-					
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="https://www.wumamii.com.tw/cometogether/" target="blank" class="cover"></a>
-								<img src="imgs/works/wumamii.png" alt="門前隱味"/>
-							</div>
-						  	<figcaption class="figcaption">門前隱味</figcaption>
-						</figure>
-					</div>
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="http://www.yuandah.com.tw/zh-tw/" target="blank" class="cover"></a>
-								<img src="imgs/works/yuandah.jpg" alt="元大消防"/>
-							</div>
-						  	<figcaption class="figcaption">元大消防</figcaption>
-						</figure>
-					</div>
-
-					
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="http://www.jdunited.com/zh-cn/" target="blank" class="cover"></a>
-								<img src="imgs/works/jdunited.jpg" alt="玖地集團"/>
-							</div>
-						  	<figcaption class="figcaption">玖地集團</figcaption>
-						</figure>
-					</div>
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="https://www.artie.com.tw/" target="blank" class="cover"></a>
-								<img src="imgs/works/artie.jpg" alt="隱策網頁設計"/>
-							</div>
-						  	<figcaption class="figcaption">隱策網頁設計</figcaption>
-						</figure>
-					</div>
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="http://demo.artie.com.tw/template/nokin/original/" target="blank" class="cover"></a>
-								<img src="imgs/works/nokin.jpg" alt="Nokin"/>
-							</div>
-						  	<figcaption class="figcaption">Nokin</figcaption>
-						</figure>
-					</div>
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="https://www.gilbelle.com/" target="blank" class="cover"></a>
-								<img src="imgs/works/gilbelle.jpg" alt="吉爾貝爾"/>
-							</div>
-						  	<figcaption class="figcaption">吉爾貝爾</figcaption>
-						</figure>
-					</div>
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="http://www.irideexperiencecenter.com/" target="blank" class="cover"></a>
-								<img src="imgs/works/i-ride.jpg" alt="i-Ride 體驗中心"/>
-							</div>
-						  	<figcaption class="figcaption">i-Ride 體驗中心</figcaption>
-						</figure>
-					</div>
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="https://www.1893boutique.com/" target="blank" class="cover"></a>
-								<img src="imgs/works/1893.jpg" alt="1893"/>
-							</div>
-						  	<figcaption class="figcaption">1893 Boutique 購物</figcaption>
-						</figure>
-					</div>
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="http://www.sunnywheel.com.tw/" target="blank" class="cover"></a>
-								<img src="imgs/works/sunnywheel.jpg" alt="sunnywheel"/>
-							</div>
-						  	<figcaption class="figcaption">瑞振工業</figcaption>
-						</figure>
-					</div>
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="https://tw.horizonyacht.com/" target="blank" class="cover"></a>
-								<img src="imgs/works/horizonyacht.jpg" alt="horizonyacht"/>
-							</div>
-						 	<figcaption class="figcaption">嘉鴻遊艇集團</figcaption>
-						</figure>
-					</div>
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="http://www.taiwansoap.com.tw/" target="blank" class="cover"></a>
-								<img src="imgs/works/taiwansoap.jpg" alt="taiwansoap"/>
-							</div>
-						  <figcaption class="figcaption">阿原肥皂</figcaption>
-						</figure>
-					</div>
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="http://fy.pacific-mall.com.tw/indexStore.php" target="blank" class="cover"></a>
-								<img src="imgs/works/pacific.jpg" alt="pacific"/>
-							</div>
-						  	<figcaption class="figcaption">太平洋百貨</figcaption>
-						</figure>
-					</div>
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="https://www.chengchingbaby.com/" target="blank" class="cover"></a>
-								<img src="imgs/works/cheng ching.jpg" alt="cheng ching"/>
-							</div>
-						  	<figcaption class="figcaption">澄清醫院附設產後護理之家</figcaption>
-						</figure>
-					</div>
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="http://www.sinphar.com.tw/" target="blank" class="cover"></a>
-								<img src="imgs/works/sinphar.jpg" alt="sinphar"/>
-							</div>
-						  	<figcaption class="figcaption">杏輝醫藥集團</figcaption>
-						</figure>
-					</div>
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="http://www.syntecclub.com.tw/" target="blank" class="cover"></a>
-								<img src="imgs/works/syntecclub.jpg" alt="syntecclub"/>
-							</div>
-						  	<figcaption class="figcaption">新代科技</figcaption>
-						</figure>
-					</div>
-					
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="http://www.bm-carbon.com/index.php" target="blank" class="cover"></a>
-								<img src="imgs/works/bm-carbon.jpg" alt="科云生醫科技"/>
-							</div>
-						  	<figcaption class="figcaption">BCT 科云生醫科技</figcaption>
-						</figure>
-					</div>
-
-					<div class="col col-12 col-md-4 col-xl-3">
-						<figure class="figure project-item">
-							<div class="pc">
-								<a href="http://html.e000352.youweb.tw/index.html" target="blank" class="cover"></a>
-								<img src="imgs/works/lele.jpg" alt="lele"/>
-							</div>
-						  	<figcaption class="figcaption">樂樂購</figcaption>
-						</figure>
-					</div>
-
-
-
 				</div>
 			</div>
 		</div>
@@ -434,5 +177,149 @@
 	<script type="text/javascript" src="js/plugins.js"></script>
 	<script type="text/javascript" src="js/wow.min.js"></script>
 	<script type="text/javascript" src="js/default.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script>
+		var app = new Vue({
+			el: '#app',
+			data: {
+				webs: [
+					{
+						title: '夏日大挑戰',
+						href: 'https://www.xin-stars.com/_event/event_Promotion/20200714_DragonGirl/',
+						img: 'imgs/works/a1.png',
+						type: 2
+					},
+					{
+						title: 'EVA 跨界作戰計畫 ',
+						href: 'https://www.xin-stars.com/_event/event_Promotion/20200424_EVANGELION/',
+						img: 'imgs/works/a-2.png',
+						type: 2
+					},
+					{
+						title: '星城戳戳樂',
+						href: 'https://xin-stars.com/_event/event_Promotion/20191009_PokeGame/',
+						img: 'imgs/works/a-3.png',
+						type: 2
+					}, {
+						title: '星城刮刮樂',
+						href: 'https://xin-stars.com/_event/event_Promotion/20190704_ScratchCard/',
+						img: 'imgs/works/a-4.png',
+						type: 2
+					}, {
+						title: 'Poker',
+						href: 'https://www.luckyraingame.com/LuckyEvent/20200519_poker',
+						img: 'imgs/works/v-1.png',
+						type: 2
+					}, {
+						title: '羅賓',
+						href: 'https://www.luckyraingame.com/LuckyEvent/20200421_Robin',
+						img: 'imgs/works/v-2.png',
+						type: 2
+					}, 
+
+					{
+						title: '星城官網',
+						href: 'https://www.xin-stars.com/',
+						img:'imgs/works/xin-1.png',
+						type: 1
+					},
+					{
+						title: '黑 Dekaron',
+						href: 'https://dk.molome.tw/',
+						img: 'imgs/works/xin-2.png',
+						type: 1
+					},
+					{
+						title: '劍俠世界貳',
+						href: 'https://js2.molome.tw/',
+						img: 'imgs/works/xin-3.png',
+						type: 1
+					},
+					{
+						title: 'WANIN Games會員平台',
+						href: 'https://www.waningames.com/',
+						img: 'imgs/works/xin-4.png',
+						type: 1
+					},
+					{
+						title: '門前隱味',
+						href: 'https://www.wumamii.com.tw/cometogether/',
+						img: 'imgs/works/wumamii.png',
+						type: 1
+					},
+					{
+						title: '元大消防',
+						href: 'http://www.yuandah.com.tw/zh-tw/',
+						img: 'imgs/works/yuandah.jpg',
+						type: 1
+					}, {
+						title: '玖地集團',
+						href: 'http://www.jdunited.com/en-us/',
+						img: 'imgs/works/jdunited.jpg',
+						type: 1
+					}, {
+						title: '隱策網頁設計',
+						href: 'https://www.artie.com.tw/',
+						img: 'imgs/works/artie.jpg',
+						type: 1
+					}, {
+						title: 'Nokin',
+						href: 'http://demo.artie.com.tw/template/nokin/original/',
+						img: 'imgs/works/nokin.jpg',
+						type: 1
+					}, {
+						title: '吉爾貝爾',
+						href: 'https://www.gilbelle.com/',
+						img: 'imgs/works/gilbelle.jpg',
+						type: 1
+					}, {
+						title: 'i-Ride 體驗中心',
+						href: 'http://www.irideexperiencecenter.com/',
+						img: 'imgs/works/i-ride.jpg',
+						type: 1
+					}, {
+						title: '1893 Boutique 購物',
+						href: 'https://www.1893boutique.com/',
+						img: 'imgs/works/1893.jpg',
+						type: 1
+					}, {
+						title: '瑞振工業',
+						href: 'http://www.sunnywheel.com.tw/',
+						img: 'imgs/works/sunnywheel.jpg',
+						type: 1
+					}, {
+						title: '嘉鴻遊艇集團',
+						href: 'https://tw.horizonyacht.com/',
+						img: 'imgs/works/horizonyacht.jpg',
+						type: 1
+					},
+					{
+						title: '阿原肥皂',
+						href: 'http://www.taiwansoap.com.tw/',
+						img: 'imgs/works/taiwansoap.jpg',
+						type: 1
+					}, {
+						title: '太平洋百貨',
+						href: 'http://fy.pacific-mall.com.tw/indexStore.php',
+						img: 'imgs/works/pacific.jpg',
+						type: 1
+					}, {
+						title: '杏輝醫藥集團',
+						href: 'http://www.sinphar.com.tw/',
+						img: 'imgs/works/sinphar.jpg',
+						type: 1
+					},
+					{
+						title: '新代科技',
+						href: 'http://www.syntecclub.com.tw/',
+						img: 'imgs/works/syntecclub.jpg',
+						type: 1
+					},
+				],
+				
+
+			}
+		})
+	</script>
 </body>
 </html>
